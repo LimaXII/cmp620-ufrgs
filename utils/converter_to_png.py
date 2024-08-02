@@ -1,14 +1,17 @@
 import os
 from PIL import Image
 
-def convert_jfif_to_png(folder_path, output_prefix):
+def convert_images_to_png(folder_path, output_prefix):
     if not os.path.isdir(folder_path):
         print("O caminho especificado não é uma pasta.")
         return
 
-    files = [f for f in os.listdir(folder_path) if f.lower().endswith('.jfif')]
+    # Lista de extensões de arquivos de imagem suportados
+    supported_extensions = ['.jpg', '.jpeg', '.jfif', '.bmp', '.gif', '.tiff', '.webp']
+
+    files = [f for f in os.listdir(folder_path) if any(f.lower().endswith(ext) for ext in supported_extensions)]
     if not files:
-        print("Nenhum arquivo .jfif encontrado na pasta.")
+        print("Nenhum arquivo de imagem suportado encontrado na pasta.")
         return
 
     for i, file in enumerate(files):
@@ -25,8 +28,8 @@ def convert_jfif_to_png(folder_path, output_prefix):
             print(f"Erro ao converter {file}: {e}")
 
 # Especifique o caminho da pasta e o prefixo de saída aqui
-folder_path = "D:\Dataset Jung\Hollow Knight"
+folder_path = "D:\\Dataset Jung\\scrapping_images"
 # Nome do arquivo de imagem de saída.
-output_prefix = "hollow_knight"
+output_prefix = "ff7_remake"
 
-convert_jfif_to_png(folder_path, output_prefix)
+convert_images_to_png(folder_path, output_prefix)

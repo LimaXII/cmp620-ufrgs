@@ -1,2 +1,7 @@
+pyscreenshot
+tensorflow
+scikit-learn
+matplotlib
+selenium
 pillow
 bs4

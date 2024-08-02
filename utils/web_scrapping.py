@@ -1,15 +1,17 @@
-import time
-import requests
+import time, requests, os
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-import os
 
+# -------------------------------------------
+# Mudar essas duas variáveis 
 # URL da página de screenshots
-url = 'https://steamcommunity.com/app/367520/screenshots'
+url = 'https://steamcommunity.com/app/1462040/screenshots/'
+folder_name = 'scrapping_images'
+# -------------------------------------------
 
 # Configurar o driver do Selenium
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -41,7 +43,7 @@ driver.quit()
 
 # Encontrar todas as imagens de screenshots
 screenshots = soup.find_all('img', class_='apphub_CardContentPreviewImage')
-save_path = "D:\Dataset Jung\Hollow Knight"
+save_path = f"D:\\Dataset Jung\\{folder_name}"
 
 # Corrigir o caminho para evitar problemas com barras invertidas
 save_path = os.path.normpath(save_path)
