@@ -1,15 +1,21 @@
+import os
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 from tensorflow.keras.models import load_model
 import numpy as np
 import tensorflow as tf
 
 # Definindo o caminho das pastas e categorias
-categories = ['Final Fantasy VII Remake', 'Resident Evil 4 Remake', 'Counter Strike 2', 'Hollow Knight', 'Hogwarts Legacy']
+categories = [
+    'Final Fantasy VII Remake', 'Resident Evil 4 Remake', 'Counter Strike 2',
+    'Hollow Knight', 'Hogwarts Legacy', 'Baldurs Gate 3', 'Minecraft',
+    'No Man\'s Sky', 'Persona 5 Royal', 'The Elder Scrolls V Skyrim'
+]
 
 # Parâmetros
 img_height, img_width = 128, 128
 
 # Carregando o modelo salvo
-model = load_model('image_classification_model.h5')
+model = load_model('./cmp620-ufrgs/models/model_v1.keras')
 
 # Função para carregar e pré-processar uma nova imagem
 def preprocess_image(img_path, img_height, img_width):
@@ -20,7 +26,7 @@ def preprocess_image(img_path, img_height, img_width):
     return img_array
 
 # Caminho da nova imagem
-new_image_path = 'caminho/para/nova/imagem.png'
+new_image_path = './cmp620-ufrgs/tests/images_test/image.png'
 
 # Pré-processando a nova imagem
 new_image = preprocess_image(new_image_path, img_height, img_width)

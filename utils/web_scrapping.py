@@ -9,7 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 # -------------------------------------------
 # Mudar essas duas variáveis 
 # URL da página de screenshots
-url = 'https://steamcommunity.com/app/1462040/screenshots/'
+url = 'https://steamcommunity.com/app/1086940/screenshots/'
 folder_name = 'scrapping_images'
 # -------------------------------------------
 
