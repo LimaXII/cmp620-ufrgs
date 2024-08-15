@@ -30,6 +30,6 @@ def convert_images_to_png(folder_path, output_prefix):
 # Especifique o caminho da pasta e o prefixo de saída aqui
 folder_path = "D:\\Dataset Jung\\scrapping_images"
 # Nome do arquivo de imagem de saída.
-output_prefix = "Baldurs_Gate_3"
+output_prefix = "ab"
 
 convert_images_to_png(folder_path, output_prefix)
