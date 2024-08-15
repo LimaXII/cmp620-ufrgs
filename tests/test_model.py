@@ -26,7 +26,7 @@ def preprocess_image(img_path, img_height, img_width):
     return img_array
 
 # Caminho da nova imagem
-new_image_path = './cmp620-ufrgs/tests/images_test/image.png'
+new_image_path = 'cmp620-ufrgs/tests/images_test/ab(0).png'
 
 # Pré-processando a nova imagem
 new_image = preprocess_image(new_image_path, img_height, img_width)
