@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 
 # Definindo o caminho das pastas
-dataset_path = 'C:\\Users\\thiag\\OneDrive\\Documentos\\Trabalhos\\Deep Learning\\dataset'
+dataset_path = './dataset'
 
 categories = [
     'Final Fantasy VII Remake', 'Resident Evil 4 Remake', 'Counter Strike 2',
