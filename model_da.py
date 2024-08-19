@@ -100,8 +100,8 @@ history = model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, vali
 print("Modelo treinado. \n")
 
 # Salvando o modelo
-model.save('C:\\Users\\thiag\\OneDrive\\Documentos\\Trabalhos\\Deep Learning\\cmp620-ufrgs\\models\\model_v1.keras')
-print("Modelo salvo em ./models/model_v1.keras")
+model.save('./models/model_v2.keras')
+print("Modelo salvo em ./models/model_v2.keras")
 
 # Plotando a acurácia e a perda
 plt.figure(figsize=(12, 4))
